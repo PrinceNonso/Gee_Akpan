@@ -1,2 +1,0 @@
-# Gee_Akpan
-portfolio

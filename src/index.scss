@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$bg_color:#F8F8F8;
+$theme_color:#516282;
+*{
+  font-family: 'Inter', sans-serif;
+}
+.text-theme{
+  color: $theme_color;
+}.bg-theme{
+  background: $theme_color;
+}
+.hover-bg-theme{
+  transition: all ease 0.4s;
+  &:hover{
+    background-color: $theme_color;
+  }
+}
+.main-container{
+  max-width: 1096px;
+  padding: 1em;
+  margin-inline: auto;
+}
+body{
+  background-color: $bg_color;
+}
+ @for $i from 1 through 20{
+    $height:$i * 50px;
+    $index:$i * 5;
+    .ht-#{$index}{
+      height: $height;
+    }
+    .max-ht-#{$index}{
+      max-height: $height;
+    }
+    .min-ht-#{$index}{
+      min-height: $height;
+    } 
+    .wt-#{$index}{
+      width: $height;
+    }
+    .min-wt-#{$index}{
+      min-width: $height;
+    }
+    .max-wt-#{$index}{
+      max-width: $height;
+    }
+ }
